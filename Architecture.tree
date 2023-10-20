@@ -1,0 +1,20 @@
+├── Folder
+├── Data ./Data
+│  ├── AppDbContext.cs ./Data/AppDbContext.cs
+│  ├── components
+│  │  ├── builder
+│  │  │  ├── center
+│  │  │  ├── left
+│  │  │  │  └── sections
+│  │  │  ├── lists
+│  │  │  └── right
+│  │  │    └── sections
+│  │  ├── dashboard
+│  │  ├── landing
+│  │  ├── router
+│  │  └── shared
+│  └── constants
+└── static
+  └── images
+    ├── screenshots
+    └── templates
