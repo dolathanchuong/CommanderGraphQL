@@ -1,7 +1,6 @@
 # Project Source tree (Markdown-director-tree)
-```md
-369369369369369
-```
+
+
 # CommanderGQL
 ##   ├── [Data](./Data) 
 ###  │   └── [AppDbContext.cs](./Data/AppDbContext.cs)
@@ -26,3 +25,31 @@
 ###  │   └── [Platform.cs](./Models/Platform.cs)
 ##   ├── [README_Call_API.md](./README_Call_API.md)
 ##   └── [README.md](./README.md)
+
+```md
+369369369369369
+  CommanderGQL
+     ├── [Data](./Data) 
+     │   └── [AppDbContext.cs](./Data/AppDbContext.cs)
+     ├── [GraphQL](./GraphQL)
+     │   ├── [Commands](./GraphQL/Commands)
+     │   │      ├── [AddCommandInput.cs](./GraphQL/Commands/AddCommandInput.cs)
+     │   │      ├── [AddCommandInputType.cs](./GraphQL/Commands/AddCommandInputType.cs)
+     │   │      ├── [AddCommandPayload.cs](./GraphQL/Commands/AddCommandPayload.cs)
+     │   │      ├── [AddCommandPayloadType.cs](./GraphQL/Commands/AddCommandPayloadType.cs)
+     │   │      └── [CommandType.cs](./GraphQL/Commands/CommandType.cs)
+     │   ├── [Platforms](./GraphQL/Platforms)
+     │   │      ├── [AddPlatformInput.cs](./GraphQL/Commands/AddPlatformInput.cs)
+     │   │      ├── [AddPlatformInputType.cs](./GraphQL/Commands/AddPlatformInputType.cs)
+     │   │      ├── [AddPlatformPayload.cs](./GraphQL/Commands/AddPlatformPayload.cs)
+     │   │      ├── [AddPlatformPayloadType.cs](./GraphQL/Commands/AddPlatformPayloadType.cs)
+     │   │      └── [PlatformType.cs](./GraphQL/Commands/PlatformType.cs)
+     │   ├── [Mutation.cs](./GraphQL/Mutation.cs)
+     │   ├── [Query.cs](./GraphQL/Query.cs)
+     │   └── [Subscription.cs](./GraphQL/Subscription.cs)
+     ├── [Models](./Models)
+     │   ├── [Command.cs](./Models/Command.cs)
+     │   └── [Platform.cs](./Models/Platform.cs)
+     ├── [README_Call_API.md](./README_Call_API.md)
+     └── [README.md](./README.md)
+```
