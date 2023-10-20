@@ -10,9 +10,13 @@
         - [Mutation.cs](./GraphQL/Mutation.cs)
         - [Query.cs](./GraphQL/Query.cs)
         - [Subscription.cs](./GraphQL/Subscription.cs)
+    - [Migrations](./Migrations)
     - [Models](./Models)
         - [Command.cs](./Models/Command.cs)
         - [Platform.cs](./Models/Platform.cs)
+    - [Properties](./Properties) [ConfigJsonFile](./Config/config.md)
+    - [Config_appsettings.Development.json](./Config/Connectionstring_config.md)
+    - [docker-compose.yaml](./docker-compose.yaml)
     - [README_Call_API.md](./README_Call_API.md)
     - [README.md](./README.md)
 

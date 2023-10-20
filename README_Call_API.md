@@ -1,5 +1,4 @@
 # Project Call API tree (Markdown Tree) ==> fulfill the requests
-
 # ===Action(insert,delete,update,...)======Mutations=========
 ## Add Platform
         mutation {
@@ -102,5 +101,4 @@
         }
 ![Alt text](image_before.png)
 ![Alt text](image_after.png)
-
 # Edit From Link : https://youtu.be/HuN94qNwQmM by 3Dola(DolaThanChuong 369)
