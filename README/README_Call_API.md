@@ -99,6 +99,6 @@
                 name
             }
         }
-![Alt text](image_before.png)
-![Alt text](image_after.png)
+![Alt text](./Config/img/image_before.png)
+![Alt text](./Config/img/image_after.png)
 # Edit From Link : https://youtu.be/HuN94qNwQmM by 3Dola(DolaThanChuong 369)
