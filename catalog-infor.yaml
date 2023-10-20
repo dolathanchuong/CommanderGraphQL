@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Component
+metadata:
+  name: .NET 7 GraphQL API
+  annotations:
+    github.com/project-slug: binarythistle/S04E01---.NET-5-GraphQL-API
+    github.com/project-edit: 3dola/369---.NET-7-GraphQL-API
+spec:
+  type: other
+  lifecycle: unknown
+  owner: 3dola
