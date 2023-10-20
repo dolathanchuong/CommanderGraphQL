@@ -1,20 +1,24 @@
-├── Folder
-├── Data ./Data
-│  ├── AppDbContext.cs ./Data/AppDbContext.cs
-│  ├── components
-│  │  ├── builder
-│  │  │  ├── center
-│  │  │  ├── left
-│  │  │  │  └── sections
-│  │  │  ├── lists
-│  │  │  └── right
-│  │  │    └── sections
-│  │  ├── dashboard
-│  │  ├── landing
-│  │  ├── router
-│  │  └── shared
-│  └── constants
-└── static
-  └── images
-    ├── screenshots
-    └── templates
+CommanderGQL
+├── Data
+│   └── AppDbContext.cs
+├── GraphQL
+│   ├── Commands
+│   │   ├── AddCommandInput.cs
+│   │   ├── AddCommandInputType.cs
+│   │   ├── AddCommandPayload.cs
+│   │   ├── AddCommandPayloadType.cs
+│   │   └── CommandType.cs
+│   ├── Platform
+│   │   ├── AddPlatformInput.cs
+│   │   ├── AddPlatformInputType.cs
+│   │   ├── AddPlatformPayload.cs
+│   │   ├── AddPlatformPayloadType.cs
+│   │   └── PlatformType.cs
+│   ├── Mutation.cs
+│   ├── Query.cs
+│   └── Subscription.cs
+├── Migrations
+├── Models
+│   ├── Command.cs
+│   └── Platform.cs
+└── docker-compose.yaml

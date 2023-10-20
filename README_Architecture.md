@@ -3,9 +3,9 @@
 369369369369369
 ```
 # CommanderGQL
-##   ├── Data ==> [Data](./Data) 
+##   ├── [Data](./Data) 
 ###  │   └── [AppDbContext.cs](./Data/AppDbContext.cs)
-##   ├── GraphQL ==> [GraphQL](./GraphQL)
+##   ├── [GraphQL](./GraphQL)
 ###  │   ├── [Commands](./GraphQL/Commands)
 #### │   │      ├── [AddCommandInput.cs](./GraphQL/Commands/AddCommandInput.cs)
 #### │   │      ├── [AddCommandInputType.cs](./GraphQL/Commands/AddCommandInputType.cs)
@@ -21,7 +21,7 @@
 ###  │   ├── [Mutation.cs](./GraphQL/Mutation.cs)
 ###  │   ├── [Query.cs](./GraphQL/Query.cs)
 ###  │   └── [Subscription.cs](./GraphQL/Subscription.cs)
-##   ├── Models ==> [Models](./Models)
+##   ├── [Models](./Models)
 ###  │   ├── [Command.cs](./Models/Command.cs)
 ###  │   └── [Platform.cs](./Models/Platform.cs)
 ##   ├── [README_Call_API.md](./README_Call_API.md)
