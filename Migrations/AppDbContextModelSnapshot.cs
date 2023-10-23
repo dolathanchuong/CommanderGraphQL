@@ -70,7 +70,7 @@ namespace CommanderGQL.Migrations
             modelBuilder.Entity("CommanderGQL.Models.Command", b =>
                 {
                     b.HasOne("CommanderGQL.Models.Platform", "platform")
-                        .WithMany("Commands")
+                        .WithMany("commands")
                         .HasForeignKey("PlatformId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -80,7 +80,7 @@ namespace CommanderGQL.Migrations
 
             modelBuilder.Entity("CommanderGQL.Models.Platform", b =>
                 {
-                    b.Navigation("Commands");
+                    b.Navigation("commands");
                 });
 #pragma warning restore 612, 618
         }

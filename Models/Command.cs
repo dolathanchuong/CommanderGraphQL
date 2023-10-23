@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+//AddCommandToDb AddPlatformToDb
 namespace CommanderGQL.Models
 {
     public class Command

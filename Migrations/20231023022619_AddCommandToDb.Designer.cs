@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommanderGQL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231018085411_AddCommandToDb")]
+    [Migration("20231023022619_AddCommandToDb")]
     partial class AddCommandToDb
     {
         /// <inheritdoc />
@@ -73,7 +73,7 @@ namespace CommanderGQL.Migrations
             modelBuilder.Entity("CommanderGQL.Models.Command", b =>
                 {
                     b.HasOne("CommanderGQL.Models.Platform", "platform")
-                        .WithMany("Commands")
+                        .WithMany("commands")
                         .HasForeignKey("PlatformId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -83,7 +83,7 @@ namespace CommanderGQL.Migrations
 
             modelBuilder.Entity("CommanderGQL.Models.Platform", b =>
                 {
-                    b.Navigation("Commands");
+                    b.Navigation("commands");
                 });
 #pragma warning restore 612, 618
         }

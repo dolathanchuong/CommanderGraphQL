@@ -2,6 +2,7 @@ using CommanderGQL.Data;
 using CommanderGQL.GraphQL.Commands;
 using CommanderGQL.GraphQL.Platforms;
 using CommanderGQL.Models;
+using HotChocolate.Language;
 using HotChocolate.Subscriptions;
 
 namespace CommanderGQL.GraphQL
@@ -10,6 +11,7 @@ namespace CommanderGQL.GraphQL
     [GraphQLDescription("Represents the mutations available.")]
     public class Mutation
     {
+        #region PlatForm Action...
         [UseDbContext(typeof(AppDbContext))]
         [GraphQLDescription("Adds a platform.")]
         public async Task<AddPlatformPayload> AddPlatformAsync(AddPlatformInput input, 
@@ -29,6 +31,38 @@ namespace CommanderGQL.GraphQL
         }
 
         [UseDbContext(typeof(AppDbContext))]
+        [GraphQLDescription("Delete a platform.")]
+        public async Task<AddPlatformPayload> DeletePlatformAsync(int platformID, [ScopedService] AppDbContext context)
+        {
+            var _findPlatForm = context.Platforms.Where(x=>x.Id == platformID).FirstOrDefault();
+            if(_findPlatForm != null)
+            {
+                context.Platforms.Remove(_findPlatForm);
+                var _result = await context.SaveChangesAsync();
+                var _check = _result > 0 ? true : false;
+                return new AddPlatformPayload(_findPlatForm);
+            }
+            return new AddPlatformPayload(default!);
+        }
+
+        [UseDbContext(typeof(AppDbContext))]
+        [GraphQLDescription("Update a platform.")]
+        public async Task<AddPlatformPayload> UpdatePlatformAsync(int platformID, AddPlatformInput input, [ScopedService] AppDbContext context)
+        {
+            var _check= false;
+            var _findPlatForm = context.Platforms.Where(x=>x.Id == platformID).FirstOrDefault();
+            if(_findPlatForm != null)
+            {
+                _findPlatForm.Name = input.Name.Trim();
+                context.Platforms.Update(_findPlatForm);
+                var _result = await context.SaveChangesAsync();
+                _check = _result > 0 ? true : false;
+            }
+            return _check ? new AddPlatformPayload(_findPlatForm!) : new AddPlatformPayload(default!);
+        }
+        #endregion
+        #region Command Action...
+        [UseDbContext(typeof(AppDbContext))]
         [GraphQLDescription("Adds a command.")]
         public async Task<AddCommandPayload> AddCommandAsync(AddCommandInput input, [ScopedService] AppDbContext context)
         {
@@ -42,5 +76,6 @@ namespace CommanderGQL.GraphQL
             await context.SaveChangesAsync();
             return new AddCommandPayload(command);
         }
+        #endregion
     }
 }
