@@ -1,4 +1,15 @@
 # CMD New Web API : dotnet new web -n graphql_demo
+## Usage
+The demo is configured to run by Docker Compose. The services are listed in the `docker-compose.yml` file. You can launch the demo by the following command.
+```bash
+docker-compose up -d
+dotnet ef migrations add AddCommandToDB
+dotnet ef database update
+
+docker-compose stop ==>(disable Connect to DB)
+docker-compose start ==>(Connect to DB)
+```
+**NOTE:** Run SqlServer 2019 on docker desktop (you can login current SQLServer on PC)
 # CommanderGraphQL
 - [README_Architecture](./README/README_Architecture.md)
 In this step-by-step tutorial I take you through how build a GraphQL API using C#9, .NET 5 and the Hot Chocolate framework.
